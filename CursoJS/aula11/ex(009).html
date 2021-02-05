@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Em qual país você reside? <input type="text" name="txtlugar" id="txtlugar">
+    <input type="button" value="Vericar" onclick="vericar()">
+    <div id="res"></div>
+   
+    <script>
+        function vericar() {
+            var lugar = document.getElementById("txtlugar")
+            var res = document.getElementById("res")
+
+            var local = lugar.value
+
+            res.innerHTML = `<p>Você é... </p>`
+
+            if(local.toUpperCase() == "BRASIL"){
+                 res.innerHTML += "<p><strong>BRASILEIRO !!!</strong></p>"
+            } else{
+                res.innerHTML += "Estrangeiro. Aproveite o BRASIL"
+            }
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
